@@ -22,8 +22,8 @@ public class GettingData
 PropertiesReader read = new PropertiesReader();
 /*public String UserNameSheet =read.usernamesheet(); 
 public String SiteSheet =read.sitedata();*/
-	public String UserNameSheet ="F:\\stage\\Pathway_stage\\src\\Pathway_Satge\\Resources\\usernames.xlsx" ;
-	 public String SiteSheet = "F:\\stage\\Pathway_stage\\src\\Pathway_Satge\\Resources\\stagesitedetails.xlsx";
+	public String UserNameSheet ="E:\\WORKSPACE\\Pathway_stage1\\Pathway_Stage\\Pathway_stage\\src\\Pathway_Satge\\Resources\\usernames.xlsx" ;
+	 public String SiteSheet = "E:\\WORKSPACE\\Pathway_stage1\\Pathway_Stage\\Pathway_stage\\src\\Pathway_Satge\\Resources\\stagesitedetails.xlsx";
 	
 		List<String>usernameslist = new ArrayList<String>();
 		List<String>passwordlist = new  ArrayList<String>();

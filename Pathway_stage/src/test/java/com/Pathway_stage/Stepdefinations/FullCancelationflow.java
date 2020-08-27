@@ -353,6 +353,37 @@ public class FullCancelationflow extends Basepage {
 
 	}
 
+@When("^fourth Legal User login with valid creditinals for Full cancelationprocess$")
+public void fourth_Legal_User_login_with_valid_creditinals_for_Full_cancelationprocess() 
+{
+	login.InitApplication();
+	legal.loginwithLeaglUser();
+	legal.legaluserloginwithpopup();
+	extentpassreport("Login with forth Legal user");
+	System.out.println("Login with forth Legal user");
+
+    
+}
+
+@Then("^Full cancelation Request reject with  fourth Legal User (\\d+)$")
+public void full_cancelation_Request_reject_with_fourth_Legal_User(int i) 
+{
+	legal.rejectacancelationpplicationwithLegalsuer(i);
+	extentpassreport("reject full cancelatio apllication with Legal user");
+	System.out.println("reject full cancelatio apllication with Legal user");
+ 
+}
+
+@Then("^logout fourth Legal User after rise a Full cancelation process$")
+public void logout_fourth_Legal_User_after_rise_a_Full_cancelation_process()
+{
+	closebrowser();
+	extentpassreport("Logout fourth legal user");
+	System.out.println(">>>Logout fourth legal user after checking the status of the  full cancelation request");
+  
+}
+
+
 	@When("^fifth RPM User login with valid creditinals for full Cancelation process$")
 	public void fifth_RPM_User_login_with_valid_creditinals_for_full_Cancelation_process() {
 		login.InitApplication();

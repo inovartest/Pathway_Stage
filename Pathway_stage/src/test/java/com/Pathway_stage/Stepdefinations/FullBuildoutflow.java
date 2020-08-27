@@ -393,6 +393,31 @@ public class FullBuildoutflow extends Basepage
 		System.out.println("noc user 4 logout after buildout request");
 
 	}
+	@When("^fourth Legal User login with valid creditinals for full BuildOutflow process$")
+	public void fourth_Legal_User_login_with_valid_creditinals_for_full_BuildOutflow_process() 
+	{
+		login.InitApplication();
+		legal.loginwithLeaglUser();
+		legal.legaluserloginwithpopup();
+		extentpassreport("Login with fourth  legal account for build out process");
+		System.out.println("Login with fourth  legal account for build out process");
+	}
+
+	@Then("^BuildOutflow Request reject with  fourth Legal User (\\d+)$")
+	public void buildoutflow_Request_reject_with_fourth_Legal_User(int i) 
+	{
+	    legal.rejectbuildoutapplicationwithlegaluser(i);
+	    extentpassreport("reject buildout request with fourth legaluser");
+	    System.out.println("reject buildout request with fourth legaluser");
+	}
+
+	@Then("^logout fourth Legal User after rise a full BuildOutflow process$")
+	public void logout_fourth_Legal_User_after_rise_a_full_BuildOutflow_process() {
+	
+		closebrowser();
+		extentpassreport("legal user 4 logout after buildout request");
+		System.out.println("legal user 4 logout after buildout request");
+	}
 
 	@When("^fifth RPM User login with valid creditinals for full BuildOutflow process$")
 	public void fifth_RPM_User_login_with_valid_creditinals_for_full_BuildOutflow_process() {

@@ -29,14 +29,14 @@ private static WebDriver driver;
 		//WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 				options.addArguments("--allow-insecure-localhost");
-				options.addArguments("--incognito");
+				//options.addArguments("--incognito");
 				DesiredCapabilities caps = DesiredCapabilities.chrome();
 				caps.setCapability(ChromeOptions.CAPABILITY, options);
 				caps.setCapability("acceptInsecureCerts", true);
 				
 		driver = new ChromeDriver(caps);
 		
-		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		VerifyBrowserOS();
 		return driver;
 	}

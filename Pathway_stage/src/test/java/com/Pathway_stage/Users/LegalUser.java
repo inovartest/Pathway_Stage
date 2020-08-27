@@ -62,5 +62,33 @@ public class LegalUser extends Basepage
 		buildout.sendtoFCCbuildoutrequest();
 		
 	}
+	public void rejectacancelationpplicationwithLegalsuer(int i)
+	{
+		refreshthepage();
+		sleep();
+		homepage.cancelationbutton();
+		sleep();
+		view.requestview(i);
+		cancel.rejectwithlegalsuer();
+	}
+	
+	public void rejectrenewalapplicationwithLegalsuer(int i) {
+		refreshthepage();
+		sleep();
+		homepage.renewalbutton();
+		sleep();
+		view.requestview(i);
+		renewalpage.rejectwithLegaluser();
+	}
+	
+	public void rejectbuildoutapplicationwithlegaluser(int i)
+	{
+		refreshthepage();
+		sleep();
+		homepage.Buildoutbutton();
+		sleep();
+		view.requestview(i);
+		buildout.rejectwithlegaluser();
+	}
 
 }

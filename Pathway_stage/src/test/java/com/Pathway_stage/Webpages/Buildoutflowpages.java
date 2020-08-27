@@ -8,7 +8,7 @@ public class Buildoutflowpages extends Basepage
 {
 	private By createnewbutton = By.xpath(".//*[@id='dropdownMenuButton']");
 	private By buildoutdropdownbutton = By.xpath("//a[contains(text(),'Buildout Complete')]");
-	private By createnewbuildoutbutton = By.xpath(".//*[@class='btn-grid approve create-cancel ml-0 mr-0 button-margin']");
+	private By createnewbuildoutbutton = By.xpath(".//*[text()=' + CREATE NEW ']");
 	private By txidfiledbox = By.xpath("//input[@placeholder='Enter TX Site ID']");
 	private By rxfieldboxforbuildout = By.xpath("//input[@placeholder='Enter RX Site ID']");
 	private By searchidbutton = By.cssSelector("#search-button");
@@ -21,7 +21,7 @@ public class Buildoutflowpages extends Basepage
 	private By buildoutconfirmationbutton = By.xpath("(.//*[text()='YES'])[1]");
 	private By okbutton = By.xpath("(.//*[text()='OK'])[1]");
 	private By rpmchecklistbox = By.xpath("//input[@type='checkbox']");
-	private By approvebuildoutbutton = By.xpath("(.//*[@class='btn-grid approve'])[1]");
+	private By approvebuildoutbutton = By.xpath(".//*[@data-target='#approve']");
 	private By rejectforbuildoutbutton = By.xpath("(.//*[@class='btn-grid reject'])[1]");
 	private By selectrejectreasonforbuildout =By.xpath(".//*[@class='w-100 ng-valid ng-dirty ng-touched']");
 	private By rejectconfirmationbutton =By.xpath("(.//*[text()='YES'])[2]");
@@ -30,6 +30,7 @@ public class Buildoutflowpages extends Basepage
 	private By sendtofccbuildoutbutton =By.xpath("(.//*[@class='btn-grid approve'])[1]");
 	private By SendoutFCCconfirmatiobuttonforbuildout =By.xpath("(.//*[text()='YES'])[1]");
 	private By yesbuttonforrpm =By.xpath("(.//*[@class='btn-grid approve'])[2]");
+	private By legaluserrejectbutton = By.xpath("(.//*[@class='btn-grid reject'])[1]");
 	public void createnewbuildoutrequestwithMarketuser(String txid, String rxid, String date)
 	{
 		explicitWaitClickable(createnewbuildoutbutton);
@@ -110,6 +111,7 @@ public class Buildoutflowpages extends Basepage
 	
 	public void buildoutrequestapprovewithNOCuser()
 	{
+		
 		elementclickbyjs(noccheclistboxforbuildout);
 		click(approvebuildoutbutton);
 		sleep();
@@ -133,5 +135,12 @@ public class Buildoutflowpages extends Basepage
 		sleep();
 		click(SendoutFCCconfirmatiobuttonforbuildout);
 		sleep();
+	}
+	public void rejectwithlegaluser()
+	{
+		elementclickbyjs(legalsuerchecklistbox);
+		elementclickbyjs(legaluserrejectbutton);
+		sleep();
+		elementclickbyjs(rejectconfirmationbutton);
 	}
 }

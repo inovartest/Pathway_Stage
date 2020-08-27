@@ -32,7 +32,8 @@ public class NOCUser extends Basepage
 		try {
 			login.popupemail(data.getUsername(3));
 			sleep();
-			login.nocuserpassword();
+			//login.nocuserpassword();
+			login.popuppassword(data.getPassword(3));
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

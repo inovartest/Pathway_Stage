@@ -243,7 +243,38 @@ public void logout_third_NOC_User_after_rise_a_Renewal_process()
 	closebrowser();
 	   extentpassreport("logout RPM user 3  after rise a renewal request");
 	   System.out.println("logout RPM user 3  after rise a renewal request");
-	   extentreportssave();
+	   
 }
 
+@When("^third Legal User login with valid creditinals for Full Renewalprocess$")
+public void third_Legal_User_login_with_valid_creditinals_for_Full_Renewalprocess() 
+{
+	login.InitApplication();
+	  legal.loginwithLeaglUser();
+	  legal.legaluserloginwithpopup();
+	  extentpassreport("Legal user3 login with succesfully valid credtinals");
+	  System.out.println("Legal user3 login with succesfully valid credtinals");
+}
+
+@Then("^Full Renewal Request reject with  third Legal User (\\d+)$")
+public void full_Renewal_Request_reject_with_third_Legal_User(int i) 
+{
+   legal.rejectrenewalapplicationwithLegalsuer(i);
+   extentpassreport("reject renweal application with legal user");
+   System.out.println("reject renweal application with legal user");
+   
+}
+
+@Then("^logout third Legal User after rise a Full Renewal process$")
+public void logout_third_Legal_User_after_rise_a_Full_Renewal_process() throws Throwable
+{
+
+	refreshthepage();
+	sleep();
+	closebrowser();
+	   extentpassreport("logout legal user 3  after rise a renewal request");
+	   System.out.println("logout legal user 3  after rise a renewal request");
+	extentreportssave();
+  
+}
 }

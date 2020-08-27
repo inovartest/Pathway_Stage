@@ -67,7 +67,7 @@ public class Loginpage extends Basepage
 	{
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--allow-insecure-localhost");
-		options.addArguments("--incognito");
+		/*options.addArguments("--incognito");*/
 		DesiredCapabilities caps = DesiredCapabilities.chrome();
 		caps.setCapability(ChromeOptions.CAPABILITY, options);
 		caps.setCapability("acceptInsecureCerts", true);
@@ -91,15 +91,15 @@ driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 	public void popupemail(String emailforpopup)
 	{
 		try {
-			Thread.sleep(10000);
+			Thread.sleep(5000);
 			Screen screen = new Screen();
-			screen.type("F:\\stage\\Pathway_stage\\Screenshot (240).png", emailforpopup);
-			Thread.sleep(2000);
+			screen.type("E:\\WORKSPACE\\Pathway_stage1\\Pathway_Stage\\Pathway_stage\\Screenshot (364).png", emailforpopup);
+			Thread.sleep(4000);
 			Robot r = new Robot();
 			r.keyPress(KeyEvent.VK_TAB);
 			
 		} catch (Exception e) {
-			// TODO: handle exception
+			
 		}
 		
 	}
@@ -108,13 +108,13 @@ driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		try {
 			Thread.sleep(2000);
 			Screen screen1 = new Screen();
-			screen1.type("F:\\stage\\Pathway_stage\\Screenshot (240).png", passwordforpopup);
+			screen1.type("E:\\WORKSPACE\\Pathway_stage1\\Pathway_Stage\\Pathway_stage\\Screenshot (364).png", passwordforpopup);
 
 			Thread.sleep(3000);
 
 			Screen screen2 = new Screen();
 			Thread.sleep(3000);
-			screen2.click("F:\\stage\\Pathway_stage\\Screenshot (242).png");
+			screen2.click("E:\\WORKSPACE\\Pathway_stage1\\Pathway_Stage\\Pathway_stage\\Screenshot (366).png");
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -131,7 +131,7 @@ try {
 	            /*
 	             * r.keyPress(KeyEvent.VK_CONTROL); sleep();
 	             */
-	            Thread.sleep(2000);
+	            Thread.sleep(5000);
 	            r.keyPress(KeyEvent.VK_SHIFT);
 	            Thread.sleep(2000);
 	            r.keyPress(KeyEvent.VK_Q);

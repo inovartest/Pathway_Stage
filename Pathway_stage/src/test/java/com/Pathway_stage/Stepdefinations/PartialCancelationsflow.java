@@ -364,6 +364,34 @@ public class PartialCancelationsflow extends Basepage {
 		System.out.println(">>>Logout fourth NOC user after checking the status of the  partial cancelation request");
 
 	}
+	@When("^fourth Legal User login with valid creditinals for partial cancelationprocess$")
+	public void fourth_Legal_User_login_with_valid_creditinals_for_partial_cancelationprocess() 
+	{
+		login.InitApplication();
+		legal.loginwithLeaglUser();
+		legal.legaluserloginwithpopup();
+		System.out.println(">>>fourth NOC user login with valid credtinals");
+		extentpassreport("fifth NOC user login with valid credtinals succesfully");
+	   
+	}
+
+	@Then("^partial cancelation Request reject with  fourth Legal User (\\d+)$")
+	public void partial_cancelation_Request_reject_with_fourth_Legal_User(int i) 
+	{
+		legal.rejectrenewalapplicationwithLegalsuer(i);
+		extentpassreport("reject partial cancelation application with Legal user");
+		System.out.println("reject partial cancelation application with Legal user");
+	   
+	} 
+
+	@Then("^logout fourth Legal User after rise a partial cancelation process$")
+	public void logout_fourth_Legal_User_after_rise_a_partial_cancelation_process() 
+	{
+		closebrowser();
+		extentpassreport("Logout fourth legal user");
+		System.out.println(">>>Logout fourth legal user after checking the status of the  partial cancelation request");
+	    
+	}
 
 	@When("^fifth RPM User login with valid creditinals for Partial Cancelation process$")
 	public void fifth_RPM_User_login_with_valid_creditinals_for_Partial_Cancelation_process() 

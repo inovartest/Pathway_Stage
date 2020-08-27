@@ -12,8 +12,9 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-features={"F:\\stage\\Pathway_stage\\src\\test\\java\\com\\Pathway_stage\\Base\\Featurefiles\\FullBuildOutflow.feature"},glue= "com.Pathway_stage.Stepdefinations",
-monochrome = true,dryRun = false,strict = true,
+features={"src\\test\\java\\com\\Pathway_stage\\Base\\Featurefiles\\FullBuildOutflow.feature"},
+glue= "com.Pathway_stage.Stepdefinations",tags="@Marketuser1,@RPMuser1,@NOCuser1,@LegalUser1",
+monochrome = true,dryRun = false, strict = true,
 format = {
         "pretty",
         "html:test-output",
@@ -22,15 +23,16 @@ format = {
 public class TestRunnerclass  extends AbstractTestNGCucumberTests{
 	@AfterClass
     public static void writeExtentReport() {
-        Reporter.loadXMLConfig("src/extentreport.xml");
+        Reporter.loadXMLConfig("E:\\WORKSPACE\\Pathway_stage1\\Pathway_Stage\\Pathway_stage\\extentreport.xml");
         
         
-    }
+    } 
   
      
 	
 	
 }
+ 	
 
 
 
@@ -41,7 +43,7 @@ public class TestRunnerclass  extends AbstractTestNGCucumberTests{
 
 
 
-
+ 
 
 
 

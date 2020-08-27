@@ -30,7 +30,8 @@ public class MarketUser extends Basepage
 	public void marketuserpopuplogin()
 	{
 		try {
-			login.popupemail(exceldata.getUsername(1));
+			
+			login.popupemail("Jaleel.Khan23@T-Mobile.com");
 			login.popuppassword(exceldata.getPassword(1));
 		} catch (Exception e) {
 			// TODO: handle exception

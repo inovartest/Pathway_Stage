@@ -28,7 +28,7 @@ public class Renewalflowpages extends Basepage
 	private By Legaluserchecklistforrenewal =By.xpath("//input[@type='checkbox']");
 	private By sendtofccforrenewalbutton = By.xpath("(.//*[@class='btn-grid approve'])[1]");
 	private By legaluserconfirmationbutton = By.xpath("(.//*[text()='YES'])[1]");
-	
+	private By legaluserrejeectbutton = By.xpath("(.//*[@class='btn-grid reject'])[1]");
 	
 	public void renewalrequestwithmarketuser(String txid, String rxid)
 	{
@@ -166,7 +166,16 @@ public class Renewalflowpages extends Basepage
 		click(legaluserconfirmationbutton);
 		sleep();
 	}
+	
+	public void rejectwithLegaluser()
+	{
+		elementclickbyjs(Legaluserchecklistforrenewal);
+		elementclickbyjs(legaluserrejeectbutton);
+		elementclickbyjs(rejectconfirmationbutton);
+	}
 
+	
+	
 }
 
 

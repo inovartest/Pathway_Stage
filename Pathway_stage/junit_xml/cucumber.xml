@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="536.268154">
+<testcase classname="check the all functions of BuildOutflow flow for all users" name="Rise a BuildOutflow Request with First Market User" time="149.179719">
+<system-out><![CDATA[Given enter url application into "chrome" for full BuildOutflow flow with "stage".passed
+When First Market User login with valid creditinals for full BuildOutflow process with "stage".passed
+Then Rise a BuildOutflow Request with  First Market User 3096 with "06-18-2020".passed
+Then logout  First MarketUser after rise a full BuildOutflow process........passed
+]]></system-out>
+</testcase>
+<testcase classname="check the all functions of BuildOutflow flow for all users" name="Check the status of the BuildOutflow apllication for with First RPM User" time="120.478493">
+<system-out><![CDATA[When First RPM User login with valid creditinals for full BuildOutflow process.passed
+Then check the "Approved" status a BuildOutflow Request with First RPM User 3096.passed
+Then logout First RPM User after rise a full BuildOutflow process...........passed
+]]></system-out>
+</testcase>
+<testcase classname="check the all functions of BuildOutflow flow for all users" name="Check the status of the BuildOutflow apllication for with First NOC User" time="135.234239">
+<system-out><![CDATA[When First NOC User login with valid creditinals for full BuildOutflow process.passed
+Then check the "Approved" status a BuildOutflow Request with  First NOC User 3096.passed
+Then logout First NOC User after rise a full BuildOutflow process...........passed
+]]></system-out>
+</testcase>
+<testcase classname="check the all functions of BuildOutflow flow for all users" name="Check the status of the BuildOutflow apllication for with First Legal User" time="131.375703">
+<system-out><![CDATA[When First Legal User login with valid creditinals for full BuildOutflow process.passed
+Then Request send to FCC of BuildOutflow Request with  First Legal User 3096.passed
+Then logout First Legal User after rise a full BuildOutflow process.........passed
+]]></system-out>
+</testcase>
+</testsuite>

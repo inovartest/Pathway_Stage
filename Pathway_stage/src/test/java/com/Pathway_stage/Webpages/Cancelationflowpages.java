@@ -30,6 +30,7 @@ public class Cancelationflowpages extends Basepage {
 	private By Leagluserchecklistbox = By.xpath("//input[@type='checkbox']");
 	private By sendtoFCCbutton = By.xpath("(.//*[@class='btn-grid approve'])[1]");
 	private By legaluserconfirmationbutton = By.xpath("(.//*[text()='YES'])[1]");
+	private By legaluserrejectbutton =By.xpath("(.//*[@class='btn-grid reject'])[1]");
 	RequestViewPage view = new RequestViewPage();
 
 	public void riseCancelationRequestWithMUuser(String Txid, String Rxid) {
@@ -209,5 +210,13 @@ public class Cancelationflowpages extends Basepage {
 		sleep();
 		click(legaluserconfirmationbutton);
 		sleep();
+	}
+	public void rejectwithlegalsuer()
+	{
+		elementclickbyjs(RPMuserchecklistbox);
+		elementclickbyjs(legaluserrejectbutton);
+		sleep();
+		elementclickbyjs(rejectconfirmationbutton);
+		
 	}
 }
